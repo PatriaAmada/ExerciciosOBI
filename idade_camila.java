@@ -8,7 +8,7 @@ import java.util.Scanner;
 //Criando classe
 public class idade_camila {
 	public static void main(String[] args) throws Exception {
-		Scanner sc = new Scanner(System.in);
+		try (Scanner sc = new Scanner(System.in)){
 		
 		//Criando um array para conter as entradas do usuário, no máximo 3
 		int[] listaIdades = new int[3];
@@ -28,10 +28,10 @@ public class idade_camila {
 			//foram diversas horas procurando uma solução que não fizesse o programa parar de funcionar por completo se o usuário colocasse uma string "a" por exemplo
 			//A solução que funcionou foi essa, verificar se era possível transformar a string de entrada em um inteiro antes de passar para o próximo passo, caso não fosse possivel ele pediria a entrada de novo
 				try {
-                		idade = Integer.parseInt(entrada);
+                idade = Integer.parseInt(entrada);
 				} catch (Exception e) {
 				//Mensagem de erro caso o usuário insira um caractere não aceito
-                		System.out.println("Entrada invalida");
+                System.out.println("Entrada invalida");
 				}
 			
 				//Validação da entrada do usuário
@@ -40,9 +40,9 @@ public class idade_camila {
 			System.out.println("Por favor insira um numero entre 5 e 100");
 			entrada = sc.nextLine();
 				try {
-               			idade = Integer.parseInt(entrada);
+                idade = Integer.parseInt(entrada);
 				} catch (Exception e) {
-                		System.out.println("Entrada invalida");
+                System.out.println("Entrada invalida");
 				}
 			}
 		// Nessa parte cada numero é posto no array, em seguida ordenado em ordem crescente, como na minha resolução do exercicio a idade de camila era a "do meio"
@@ -51,16 +51,16 @@ public class idade_camila {
 		}
 		int temporario;
 		for (int i = 0; i < listaIdades.length; i++) {
-            		for (int j = i + 1; j < listaIdades.length; j++) {
-                		if (listaIdades[i] > listaIdades[j]) {
-                   			temporario = listaIdades[i];
-                    			listaIdades[i] = listaIdades[j];
-                    			listaIdades[j] = temporario;
+            for (int j = i + 1; j < listaIdades.length; j++) {
+                if (listaIdades[i] > listaIdades[j]) {
+                    temporario = listaIdades[i];
+                    listaIdades[i] = listaIdades[j];
+                    listaIdades[j] = temporario;
                 }
             }
-    
         }
-		//Mostrando  oresultado final
+		//Resultado final que irá aparecer na tela    
 		System.out.println("Camila possui: " + listaIdades[1] + " anos");
 		
+		}
 	}}
