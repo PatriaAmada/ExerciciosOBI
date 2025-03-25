@@ -1,3 +1,15 @@
+// JAVA EXERCISE
+
+//Cibele, Camila and Celeste are three inseparable sisters. They are always together and love to play sports, read, cook, play computer games... Now they are learning to program computers to develop their own games.
+//But none of that matters for this task: we are only interested in their ages. We know that Cibele was born before Camila and Celeste was born after Camila.
+//Given three integers indicating the ages of the sisters, write a program to determine Camila's age.
+//Input
+//The input consists of three lines, each line containing an integer N, the age of one of the sisters.
+//Output
+//Your program must output a single line, containing a single integer, Camila's age.
+//Constraints
+//5 ≤ N ≤ 100
+
 package exercicios;
 import java.util.Scanner;
 
